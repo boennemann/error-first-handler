@@ -14,8 +14,8 @@ npm i -S error-first-handler
 var fs = require('fs')
 var efh = require('error-first-handler')
 
-var default = efh()
-fs.readFile('./package.json', default(function (data) {
+var defaultHandler = efh()
+fs.readFile('./package.json', defaultHandler(function (data) {
   // If an error occured it is thrown
   // Otherwhise the error is shaved off the arguments array
 }))
@@ -39,7 +39,7 @@ fs.readFile('./package.json', custom2(function (data) {
 
 // Passing errors to a parent callback is easy
 function readFile(cb) {
-  fs.readFile('./package.json', efh(cb)(function {
+  fs.readFile('./package.json', efh(cb)(function (data) {
     // If an error occured it is handled by the parent callback
     // Otherwhise the error is shaved off the arguments array
   }))  
