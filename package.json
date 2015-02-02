@@ -1,0 +1,33 @@
+{
+  "name": "error-first-handler",
+  "description": "handles error first callbacks",
+  "version": "0.0.0",
+  "author": "Stephan Bönnemann <stephan@boennemann.me>",
+  "bugs": {
+    "url": "https://github.com/boennemann/error-first-handler/issues"
+  },
+  "devDependencies": {
+    "semantic-release": "^1.1.1",
+    "standard": "^2.3.1",
+    "tap-spec": "^2.2.0",
+    "tape": "^3.5.0"
+  },
+  "homepage": "https://github.com/boennemann/error-first-handler",
+  "keywords": [
+    "error",
+    "handling",
+    "callbacks",
+    "error-first"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boennemann/error-first-handler.git"
+  },
+  "scripts": {
+    "test": "standard && node tests | tap-spec",
+    "prepublish": "semantic-release pre",
+    "postpublish": "semantic-release post"
+  }
+}

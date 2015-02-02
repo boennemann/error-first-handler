@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- '0.10'
+sudo: false
+cache:
+  directories:
+  - node_modules
+notifications:
+  email: false
+deploy:
+  provider: npm
+  email: stephan@boennemann.me
+  skip_cleanup: true
+  api_key:
+    secure: P2dmikxLuIQ+7KoG9Ms9/8CiZYsx1wnrCj2vvlrKv5dwAPz7hbwUT3H/P1e2lnKTOpZr51peqEKVYZGQqyitcURQ36Wl6FjEXfTRjqkPZbZxWyWpDMVry8K7pporzQw3lXocL5L86F2JJyhYV5rR/U7S6G9z9meOJ/rNPJJ8yfA=
+  on:
+    branch: master
+    repo: boennemann/error-first-handler
