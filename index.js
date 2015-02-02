@@ -2,7 +2,7 @@
 
 var exports = module.exports = function (input) {
   var errorHandler = exports.throwError
-  if (typeof errorHandler === 'function') errorHandler = input
+  if (typeof input === 'function') errorHandler = input
 
   return function(handler) {
     return function(err) {
